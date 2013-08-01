@@ -7,22 +7,46 @@
 //
 
 #import "ViewController.h"
-#import "SimpleHttpGetApi.h"
-#import "SimpleExecutor.h"
+#import "ASIHTTPRequest.h"
+#import "XHFApi.h"
+#import "XHFExecutor.h"
+#import "XHFSimpleExecutor.h"
+#import "XHFExecutorPlugin.h"
+#import "XHFExecutorContext.h"
+#import "SimpleApi.h"
+
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self=[super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self){
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    SimpleHttpGetApi *api=[[SimpleHttpGetApi alloc]initWithUrl:@"http://www.baidu.com"];
-    SimpleExecutor *stratgy=[[SimpleExecutor alloc]init];
-    NSString *result=[stratgy execute:api];
-    NSLog(@"%@",result);
+    
+    UIScrollView *scroll=[[UIScrollView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:scroll];
+    
+    SimpleApi *api=[[SimpleApi alloc]initWithUrl:@"http://www.baidu.com"];
+    [[[XHFSimpleExecutor alloc]init]execute:api completeOnMainThread:^(NSString* result, NSException *exception) {
+        UILabel *label=[[UILabel alloc]init];
+        label.text=result;
+        label.numberOfLines=0;
+        CGSize size=[label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(320, 100000)];
+        label.frame=CGRectMake(0, 0, size.width, size.height);
+        [scroll addSubview:label];
+        scroll.contentSize=size;
+    }];
     
 }
 
@@ -32,4 +56,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 @end
+
+
+

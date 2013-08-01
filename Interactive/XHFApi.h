@@ -11,17 +11,24 @@
 @class ASIHTTPRequest;
 
 @protocol XHFResponseParser <NSObject>
-
--(id)parse:(ASIHTTPRequest *)request;
+@required
+-(id)parse:(ASIHTTPRequest*)request exception:(NSException*__autoreleasing*)exception;
 
 @end
 
-@protocol XHFInteractiveApi <NSObject>
+@protocol XHFApi <NSObject>
+
+@required
 //获取HTTP请求
--(ASIHTTPRequest *) getHttpRequest;
-//获取HTTP请求的返回结果
+-(ASIHTTPRequest*) getHttpRequest;
+//获取HTTP请求返回结果的解析器
 -(id<XHFResponseParser>) getResponseParser;
 
+
+@optional
+//模拟Api的返回结果
+//如果返回为nil，则认为不进行mock
+-(id)mock;
 @end
 
 

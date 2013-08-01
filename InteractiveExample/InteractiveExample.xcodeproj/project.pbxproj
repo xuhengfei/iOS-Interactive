@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E803EF3017AA449500F51ACB /* XHFExecutorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2717AA449500F51ACB /* XHFExecutorContext.m */; };
+		E803EF3117AA449500F51ACB /* XHFJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2B17AA449500F51ACB /* XHFJsonParser.m */; };
+		E803EF3217AA449500F51ACB /* XHFSimpleExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2D17AA449500F51ACB /* XHFSimpleExecutor.m */; };
+		E803EF3317AA449500F51ACB /* XHFSimpleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2F17AA449500F51ACB /* XHFSimpleHandler.m */; };
+		E803EF3717AA450200F51ACB /* SimpleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF3617AA450200F51ACB /* SimpleApi.m */; };
 		E859FA07176AAB0D005CB80B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FA06176AAB0D005CB80B /* UIKit.framework */; };
 		E859FA09176AAB0D005CB80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FA08176AAB0D005CB80B /* Foundation.framework */; };
 		E859FA0B176AAB0D005CB80B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FA0A176AAB0D005CB80B /* CoreGraphics.framework */; };
@@ -42,17 +47,25 @@
 		E859FAA5176AAB6A005CB80B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FAA4176AAB6A005CB80B /* SystemConfiguration.framework */; };
 		E859FAA7176AAB79005CB80B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FAA6176AAB79005CB80B /* CFNetwork.framework */; };
 		E859FAA9176AAB85005CB80B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FAA8176AAB85005CB80B /* MobileCoreServices.framework */; };
-		E859FAAD176AAC19005CB80B /* SimpleExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E859FAAC176AAC19005CB80B /* SimpleExecutor.m */; };
-		E859FAB2176AAD27005CB80B /* SimpleHttpGetApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E859FAB1176AAD27005CB80B /* SimpleHttpGetApi.m */; };
 		E859FAB6176AAFBE005CB80B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E859FAB5176AAFBE005CB80B /* Reachability.m */; };
 		E859FABA176AB37C005CB80B /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FAB9176AB37C005CB80B /* libz.1.1.3.dylib */; };
-		E859FAC2176ABD6C005CB80B /* ImageDownloadApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E859FAC1176ABD6C005CB80B /* ImageDownloadApi.m */; };
-		E8D5A64D176B045500924E60 /* TOPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5A64C176B045500924E60 /* TOPApi.m */; };
-		E8D5A650176B112600924E60 /* GetUploadTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5A64F176B112600924E60 /* GetUploadTokenApi.m */; };
-		E8D5A653176B133100924E60 /* MTOPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5A652176B133100924E60 /* MTOPApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E803EF2417AA449400F51ACB /* XHFApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFApi.h; sourceTree = "<group>"; };
+		E803EF2517AA449500F51ACB /* XHFExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFExecutor.h; sourceTree = "<group>"; };
+		E803EF2617AA449500F51ACB /* XHFExecutorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFExecutorContext.h; sourceTree = "<group>"; };
+		E803EF2717AA449500F51ACB /* XHFExecutorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFExecutorContext.m; sourceTree = "<group>"; };
+		E803EF2817AA449500F51ACB /* XHFExecutorPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFExecutorPlugin.h; sourceTree = "<group>"; };
+		E803EF2917AA449500F51ACB /* XHFHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFHandler.h; sourceTree = "<group>"; };
+		E803EF2A17AA449500F51ACB /* XHFJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFJsonParser.h; sourceTree = "<group>"; };
+		E803EF2B17AA449500F51ACB /* XHFJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFJsonParser.m; sourceTree = "<group>"; };
+		E803EF2C17AA449500F51ACB /* XHFSimpleExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFSimpleExecutor.h; sourceTree = "<group>"; };
+		E803EF2D17AA449500F51ACB /* XHFSimpleExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFSimpleExecutor.m; sourceTree = "<group>"; };
+		E803EF2E17AA449500F51ACB /* XHFSimpleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFSimpleHandler.h; sourceTree = "<group>"; };
+		E803EF2F17AA449500F51ACB /* XHFSimpleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFSimpleHandler.m; sourceTree = "<group>"; };
+		E803EF3517AA450200F51ACB /* SimpleApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleApi.h; sourceTree = "<group>"; };
+		E803EF3617AA450200F51ACB /* SimpleApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleApi.m; sourceTree = "<group>"; };
 		E859FA03176AAB0D005CB80B /* InteractiveExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859FA06176AAB0D005CB80B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E859FA08176AAB0D005CB80B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,8 +82,6 @@
 		E859FA1E176AAB0E005CB80B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E859FA1F176AAB0E005CB80B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E859FA22176AAB0E005CB80B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		E859FA2A176AAB41005CB80B /* XHFInteractiveApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFInteractiveApi.h; sourceTree = "<group>"; };
-		E859FA2B176AAB41005CB80B /* XHFInteractiveExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFInteractiveExecutor.h; sourceTree = "<group>"; };
 		E859FA2D176AAB54005CB80B /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		E859FA2E176AAB54005CB80B /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		E859FA2F176AAB54005CB80B /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -121,23 +132,11 @@
 		E859FAA4176AAB6A005CB80B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E859FAA6176AAB79005CB80B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E859FAA8176AAB85005CB80B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		E859FAAB176AAC19005CB80B /* SimpleExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleExecutor.h; sourceTree = "<group>"; };
-		E859FAAC176AAC19005CB80B /* SimpleExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleExecutor.m; sourceTree = "<group>"; };
-		E859FAB0176AAD27005CB80B /* SimpleHttpGetApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleHttpGetApi.h; sourceTree = "<group>"; };
-		E859FAB1176AAD27005CB80B /* SimpleHttpGetApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleHttpGetApi.m; sourceTree = "<group>"; };
 		E859FAB4176AAFBE005CB80B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		E859FAB5176AAFBE005CB80B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		E859FAB7176AB082005CB80B /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		E859FAB9176AB37C005CB80B /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		E859FABB176AB38A005CB80B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		E859FAC0176ABD6C005CB80B /* ImageDownloadApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloadApi.h; sourceTree = "<group>"; };
-		E859FAC1176ABD6C005CB80B /* ImageDownloadApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloadApi.m; sourceTree = "<group>"; };
-		E8D5A64B176B045500924E60 /* TOPApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOPApi.h; sourceTree = "<group>"; };
-		E8D5A64C176B045500924E60 /* TOPApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOPApi.m; sourceTree = "<group>"; };
-		E8D5A64E176B112600924E60 /* GetUploadTokenApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUploadTokenApi.h; sourceTree = "<group>"; };
-		E8D5A64F176B112600924E60 /* GetUploadTokenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUploadTokenApi.m; sourceTree = "<group>"; };
-		E8D5A651176B133100924E60 /* MTOPApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTOPApi.h; sourceTree = "<group>"; };
-		E8D5A652176B133100924E60 /* MTOPApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTOPApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +157,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E803EF3417AA44D100F51ACB /* APIS */ = {
+			isa = PBXGroup;
+			children = (
+				E803EF3517AA450200F51ACB /* SimpleApi.h */,
+				E803EF3617AA450200F51ACB /* SimpleApi.m */,
+			);
+			name = APIS;
+			sourceTree = "<group>";
+		};
 		E859F9FA176AAB0D005CB80B = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +205,7 @@
 		E859FA0C176AAB0D005CB80B /* InteractiveExample */ = {
 			isa = PBXGroup;
 			children = (
-				E8D5A64A176B043500924E60 /* tb */,
-				E859FAAA176AABEA005CB80B /* impl */,
+				E803EF3417AA44D100F51ACB /* APIS */,
 				E859FA15176AAB0D005CB80B /* AppDelegate.h */,
 				E859FA16176AAB0D005CB80B /* AppDelegate.m */,
 				E859FA1E176AAB0E005CB80B /* ViewController.h */,
@@ -226,8 +233,18 @@
 		E859FA29176AAB41005CB80B /* Interactive */ = {
 			isa = PBXGroup;
 			children = (
-				E859FA2A176AAB41005CB80B /* XHFInteractiveApi.h */,
-				E859FA2B176AAB41005CB80B /* XHFInteractiveExecutor.h */,
+				E803EF2417AA449400F51ACB /* XHFApi.h */,
+				E803EF2517AA449500F51ACB /* XHFExecutor.h */,
+				E803EF2617AA449500F51ACB /* XHFExecutorContext.h */,
+				E803EF2717AA449500F51ACB /* XHFExecutorContext.m */,
+				E803EF2817AA449500F51ACB /* XHFExecutorPlugin.h */,
+				E803EF2917AA449500F51ACB /* XHFHandler.h */,
+				E803EF2A17AA449500F51ACB /* XHFJsonParser.h */,
+				E803EF2B17AA449500F51ACB /* XHFJsonParser.m */,
+				E803EF2C17AA449500F51ACB /* XHFSimpleExecutor.h */,
+				E803EF2D17AA449500F51ACB /* XHFSimpleExecutor.m */,
+				E803EF2E17AA449500F51ACB /* XHFSimpleHandler.h */,
+				E803EF2F17AA449500F51ACB /* XHFSimpleHandler.m */,
 			);
 			name = Interactive;
 			path = ../Interactive;
@@ -304,35 +321,6 @@
 			path = S3;
 			sourceTree = "<group>";
 		};
-		E859FAAA176AABEA005CB80B /* impl */ = {
-			isa = PBXGroup;
-			children = (
-				E859FAAF176AAD00005CB80B /* api */,
-				E859FAAE176AACF6005CB80B /* strategy */,
-			);
-			name = impl;
-			sourceTree = "<group>";
-		};
-		E859FAAE176AACF6005CB80B /* strategy */ = {
-			isa = PBXGroup;
-			children = (
-				E859FAAB176AAC19005CB80B /* SimpleExecutor.h */,
-				E859FAAC176AAC19005CB80B /* SimpleExecutor.m */,
-			);
-			name = strategy;
-			sourceTree = "<group>";
-		};
-		E859FAAF176AAD00005CB80B /* api */ = {
-			isa = PBXGroup;
-			children = (
-				E859FAB0176AAD27005CB80B /* SimpleHttpGetApi.h */,
-				E859FAB1176AAD27005CB80B /* SimpleHttpGetApi.m */,
-				E859FAC0176ABD6C005CB80B /* ImageDownloadApi.h */,
-				E859FAC1176ABD6C005CB80B /* ImageDownloadApi.m */,
-			);
-			name = api;
-			sourceTree = "<group>";
-		};
 		E859FAB3176AAFBE005CB80B /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,19 +329,6 @@
 			);
 			name = Reachability;
 			path = ../libs/Reachability;
-			sourceTree = "<group>";
-		};
-		E8D5A64A176B043500924E60 /* tb */ = {
-			isa = PBXGroup;
-			children = (
-				E8D5A64B176B045500924E60 /* TOPApi.h */,
-				E8D5A64C176B045500924E60 /* TOPApi.m */,
-				E8D5A64E176B112600924E60 /* GetUploadTokenApi.h */,
-				E8D5A64F176B112600924E60 /* GetUploadTokenApi.m */,
-				E8D5A651176B133100924E60 /* MTOPApi.h */,
-				E8D5A652176B133100924E60 /* MTOPApi.m */,
-			);
-			name = tb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,13 +421,12 @@
 				E859FA92176AAB54005CB80B /* ASIS3ObjectRequest.m in Sources */,
 				E859FA93176AAB54005CB80B /* ASIS3Request.m in Sources */,
 				E859FA94176AAB54005CB80B /* ASIS3ServiceRequest.m in Sources */,
-				E859FAAD176AAC19005CB80B /* SimpleExecutor.m in Sources */,
-				E859FAB2176AAD27005CB80B /* SimpleHttpGetApi.m in Sources */,
 				E859FAB6176AAFBE005CB80B /* Reachability.m in Sources */,
-				E859FAC2176ABD6C005CB80B /* ImageDownloadApi.m in Sources */,
-				E8D5A64D176B045500924E60 /* TOPApi.m in Sources */,
-				E8D5A650176B112600924E60 /* GetUploadTokenApi.m in Sources */,
-				E8D5A653176B133100924E60 /* MTOPApi.m in Sources */,
+				E803EF3017AA449500F51ACB /* XHFExecutorContext.m in Sources */,
+				E803EF3117AA449500F51ACB /* XHFJsonParser.m in Sources */,
+				E803EF3217AA449500F51ACB /* XHFSimpleExecutor.m in Sources */,
+				E803EF3317AA449500F51ACB /* XHFSimpleHandler.m in Sources */,
+				E803EF3717AA450200F51ACB /* SimpleApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +513,7 @@
 				GCC_PREFIX_HEADER = "InteractiveExample/InteractiveExample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "InteractiveExample/InteractiveExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -551,6 +526,7 @@
 				GCC_PREFIX_HEADER = "InteractiveExample/InteractiveExample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "InteractiveExample/InteractiveExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
