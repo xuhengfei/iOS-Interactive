@@ -12,7 +12,7 @@ Features:
 ***Expansibility*** : all Protocol can be implementation by yourself  
 
 
-Interactive have 5 Core Protocols, the relationship like below image:    
+Interactive have 4 Core Protocols, the relationship like below image:    
 <img src="http://xuhengfei.com/assets/images/interaceive/protocols.png" />
 
 ***XHFApi*** (we call *Api* below)  
