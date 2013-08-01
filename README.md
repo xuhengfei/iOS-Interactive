@@ -6,13 +6,14 @@ More Imagination ideas are waiting for you to implementation
 
 Features:  
 ***Simple***: make http process simple  
-***Mock*** : simple http response mock (not just string ,but object)
-***Reuseable and Transferable*** : requests will be wapper as a Api 
-***Plugin*** : support preProcess and postProcess and transparent to invoker
-***Expansibility*** : all Protocol can be implementation by yourself
+***Mock*** : simple http response mock (not just string ,but object)  
+***Reuseable and Transferable*** : requests will be wapper as a Api  
+***Plugin*** : support preProcess and postProcess and transparent to invoker  
+***Expansibility*** : all Protocol can be implementation by yourself  
 
 
-Protols introduce:  
+Interactive have 5 Core Protocols, the relationship like below image:    
+<img src="http://xuhengfei.com/assets/images/interaceive/protocols.png" />
 
 ***XHFApi*** (we call *Api* below)  
 ```objective-c
@@ -81,7 +82,7 @@ When you execute a Api in Async Mode, you can receive a Handler,using Handler,yo
 
 @end
 ```
-Plugin is vary useful Feature  
+Plugin is a very useful Feature  
 You can do something before or after request send,and this will be transparent for Api invoker  
 Both preProcess and postProcess ,we give Classic Case  
 Case1: Http Request Cache  
@@ -96,6 +97,5 @@ When Login Plugin receive session invalid message,call Login UI pop and lead use
 After Login success,Login Plugin make Http Request replay  
 All this flow is transparent to Api invoker,and invoker not need to think about session invalid problems  
 
-Above 5 Protocols' relationship like below image:  
-<img src="http://xuhengfei.com/assets/images/interaceive/protocols.png" />
+
 
