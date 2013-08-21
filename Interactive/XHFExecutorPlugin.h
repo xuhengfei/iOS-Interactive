@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XHFExecutorContext.h"
 #import "ASIHTTPRequest.h"
+#import "XHFApi.h"
 
 @protocol XHFExecutorPlugin <NSObject>
 

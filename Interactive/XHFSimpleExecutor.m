@@ -28,13 +28,13 @@
     }
     return self;
 }
--(id)execute:(id<XHFApi>)api exception:(NSException *__autoreleasing *)_exception{
+-(id)execute:(id<XHFApi>)api error:(NSError *__autoreleasing *)error{
     XHFExecutorContext *context=[[XHFExecutorContext alloc]init];
-    if(_exception==nil){
-        __autoreleasing NSException *ex=nil;
-        _exception=&ex;
+    if(error==nil){
+        __autoreleasing NSError *ex=nil;
+        error=&ex;
     }
-    return [self execute0:api exception:_exception context:context handler:nil];
+    return [self execute0:api error:error context:context handler:nil];
 }
 
 -(id<XHFHandler>)execute:(id<XHFApi>)api completeOnMainThread:(CompleteCallback)callback{
@@ -50,18 +50,18 @@
 #pragma mark private methods
 //在后台新线程中执行此方法
 -(void)background:(NSDictionary *)dict{
-    NSException *ex=nil;
+    NSError *ex=nil;
     id<XHFApi> api=[dict objectForKey:@"api"];
     CompleteCallback callback=[dict objectForKey:@"callback"];
     id<XHFHandler> handler=[dict objectForKey:@"handler"];
-    id result=[self execute0:api exception:&ex context:[[XHFExecutorContext alloc]init] handler:handler];
+    id result=[self execute0:api error:&ex context:[[XHFExecutorContext alloc]init] handler:handler];
     NSMutableDictionary *params=[[NSMutableDictionary alloc]init];
     [params setObject:callback forKey:@"callback"];
     if(result!=nil){
         [params setObject:result forKey:@"result"];
     }
     if(ex!=nil){
-        [params setObject:ex forKey:@"exception"];
+        [params setObject:ex forKey:@"error"];
     }
     if(![handler isCanceled]){
         [self performSelectorOnMainThread:@selector(mainThread:) withObject:params waitUntilDone:NO];
@@ -73,11 +73,11 @@
 -(void)mainThread:(NSDictionary *)params{
     CompleteCallback callback=[params objectForKey:@"callback"];
     id result=[params objectForKey:@"result"];
-    NSException *exception=[params objectForKey:@"exception"];
-    callback(result,exception);
+    NSError *error=[params objectForKey:@"error"];
+    callback(result,error);
 }
 
-- (id)execute1:(id<XHFApi>)api exception:(NSException **)_exception context:(XHFExecutorContext*)context handler:(id<XHFHandler>)handler{
+- (id)execute1:(id<XHFApi>)api error:(NSError **)error context:(XHFExecutorContext*)context handler:(id<XHFHandler>)handler{
     id result=nil;
     ASIHTTPRequest *req=[api getHttpRequest];
     if([handler respondsToSelector:@selector(setRequest:)]){
@@ -112,15 +112,15 @@
         }
     }
     if(result==nil){
-        result= [[api getResponseParser]parse:req exception:_exception];
+        result= [[api getResponseParser]parse:req error:error];
     }
     return result;
 }
-- (id)execute0:(id<XHFApi>)api exception:(NSException **)_exception context:(XHFExecutorContext*)context handler:(id<XHFHandler>)handler{
-    id result=[self execute1:api exception:_exception context:context handler:handler];
+- (id)execute0:(id<XHFApi>)api error:(NSError **)error context:(XHFExecutorContext*)context handler:(id<XHFHandler>)handler{
+    id result=[self execute1:api error:error context:context handler:handler];
     if(context.needReplay){
         context.needReplay=NO;
-        result=[self execute1:api exception:_exception context:context handler:handler];
+        result=[self execute1:api error:error context:context handler:handler];
     }
     return result;
 }

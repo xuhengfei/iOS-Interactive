@@ -12,7 +12,7 @@
 
 @protocol XHFResponseParser <NSObject>
 @required
--(id)parse:(ASIHTTPRequest*)request exception:(NSException*__autoreleasing*)exception;
+-(id)parse:(ASIHTTPRequest*)request error:(NSError*__autoreleasing*)error;
 
 @end
 

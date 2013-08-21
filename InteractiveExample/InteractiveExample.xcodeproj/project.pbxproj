@@ -12,6 +12,11 @@
 		E803EF3217AA449500F51ACB /* XHFSimpleExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2D17AA449500F51ACB /* XHFSimpleExecutor.m */; };
 		E803EF3317AA449500F51ACB /* XHFSimpleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2F17AA449500F51ACB /* XHFSimpleHandler.m */; };
 		E803EF3717AA450200F51ACB /* SimpleApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF3617AA450200F51ACB /* SimpleApi.m */; };
+		E803EF4517AD24BC00F51ACB /* XHFLocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF4417AD24BC00F51ACB /* XHFLocalCache.m */; };
+		E803EF4917AD28E900F51ACB /* ImageLoadApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF4817AD28E900F51ACB /* ImageLoadApi.m */; };
+		E803EF4C17AD2A5D00F51ACB /* ImagePoolExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF4B17AD2A5C00F51ACB /* ImagePoolExecutor.m */; };
+		E803EF4F17AD2AD100F51ACB /* ImageCachePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF4E17AD2AD100F51ACB /* ImageCachePlugin.m */; };
+		E803EF5217AD3C1B00F51ACB /* ImagePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF5117AD3C1B00F51ACB /* ImagePoolViewController.m */; };
 		E859FA07176AAB0D005CB80B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FA06176AAB0D005CB80B /* UIKit.framework */; };
 		E859FA09176AAB0D005CB80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FA08176AAB0D005CB80B /* Foundation.framework */; };
 		E859FA0B176AAB0D005CB80B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E859FA0A176AAB0D005CB80B /* CoreGraphics.framework */; };
@@ -66,6 +71,16 @@
 		E803EF2F17AA449500F51ACB /* XHFSimpleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFSimpleHandler.m; sourceTree = "<group>"; };
 		E803EF3517AA450200F51ACB /* SimpleApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleApi.h; sourceTree = "<group>"; };
 		E803EF3617AA450200F51ACB /* SimpleApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleApi.m; sourceTree = "<group>"; };
+		E803EF4317AD24BC00F51ACB /* XHFLocalCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHFLocalCache.h; path = InteractiveExample/XHFLocalCache.h; sourceTree = "<group>"; };
+		E803EF4417AD24BC00F51ACB /* XHFLocalCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHFLocalCache.m; path = InteractiveExample/XHFLocalCache.m; sourceTree = "<group>"; };
+		E803EF4717AD28E900F51ACB /* ImageLoadApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoadApi.h; sourceTree = "<group>"; };
+		E803EF4817AD28E900F51ACB /* ImageLoadApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoadApi.m; sourceTree = "<group>"; };
+		E803EF4A17AD2A5C00F51ACB /* ImagePoolExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePoolExecutor.h; sourceTree = "<group>"; };
+		E803EF4B17AD2A5C00F51ACB /* ImagePoolExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePoolExecutor.m; sourceTree = "<group>"; };
+		E803EF4D17AD2AD100F51ACB /* ImageCachePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCachePlugin.h; sourceTree = "<group>"; };
+		E803EF4E17AD2AD100F51ACB /* ImageCachePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCachePlugin.m; sourceTree = "<group>"; };
+		E803EF5017AD3C1B00F51ACB /* ImagePoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePoolViewController.h; sourceTree = "<group>"; };
+		E803EF5117AD3C1B00F51ACB /* ImagePoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePoolViewController.m; sourceTree = "<group>"; };
 		E859FA03176AAB0D005CB80B /* InteractiveExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859FA06176AAB0D005CB80B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E859FA08176AAB0D005CB80B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -166,9 +181,34 @@
 			name = APIS;
 			sourceTree = "<group>";
 		};
+		E803EF4217AD246A00F51ACB /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				E803EF4317AD24BC00F51ACB /* XHFLocalCache.h */,
+				E803EF4417AD24BC00F51ACB /* XHFLocalCache.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		E803EF4617AD28C500F51ACB /* imagepool */ = {
+			isa = PBXGroup;
+			children = (
+				E803EF4717AD28E900F51ACB /* ImageLoadApi.h */,
+				E803EF4817AD28E900F51ACB /* ImageLoadApi.m */,
+				E803EF4A17AD2A5C00F51ACB /* ImagePoolExecutor.h */,
+				E803EF4B17AD2A5C00F51ACB /* ImagePoolExecutor.m */,
+				E803EF4D17AD2AD100F51ACB /* ImageCachePlugin.h */,
+				E803EF4E17AD2AD100F51ACB /* ImageCachePlugin.m */,
+				E803EF5017AD3C1B00F51ACB /* ImagePoolViewController.h */,
+				E803EF5117AD3C1B00F51ACB /* ImagePoolViewController.m */,
+			);
+			name = imagepool;
+			sourceTree = "<group>";
+		};
 		E859F9FA176AAB0D005CB80B = {
 			isa = PBXGroup;
 			children = (
+				E803EF4217AD246A00F51ACB /* Cache */,
 				E859FA29176AAB41005CB80B /* Interactive */,
 				E859FA0C176AAB0D005CB80B /* InteractiveExample */,
 				E859FA05176AAB0D005CB80B /* Frameworks */,
@@ -205,6 +245,7 @@
 		E859FA0C176AAB0D005CB80B /* InteractiveExample */ = {
 			isa = PBXGroup;
 			children = (
+				E803EF4617AD28C500F51ACB /* imagepool */,
 				E803EF3417AA44D100F51ACB /* APIS */,
 				E859FA15176AAB0D005CB80B /* AppDelegate.h */,
 				E859FA16176AAB0D005CB80B /* AppDelegate.m */,
@@ -427,6 +468,11 @@
 				E803EF3217AA449500F51ACB /* XHFSimpleExecutor.m in Sources */,
 				E803EF3317AA449500F51ACB /* XHFSimpleHandler.m in Sources */,
 				E803EF3717AA450200F51ACB /* SimpleApi.m in Sources */,
+				E803EF4517AD24BC00F51ACB /* XHFLocalCache.m in Sources */,
+				E803EF4917AD28E900F51ACB /* ImageLoadApi.m in Sources */,
+				E803EF4C17AD2A5D00F51ACB /* ImagePoolExecutor.m in Sources */,
+				E803EF4F17AD2AD100F51ACB /* ImageCachePlugin.m in Sources */,
+				E803EF5217AD3C1B00F51ACB /* ImagePoolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

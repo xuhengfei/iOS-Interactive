@@ -1,16 +1,16 @@
 //
-//  SimpleApi.m
+//  ImageLoadApi.m
 //  InteractiveExample
 //
-//  Created by 周方 on 13-8-1.
+//  Created by 周方 on 13-8-3.
 //  Copyright (c) 2013年 xuhengfei. All rights reserved.
 //
 
-#import "SimpleApi.h"
+#import "ImageLoadApi.h"
 #import "ASIHTTPRequest.h"
 
-@implementation SimpleApi{
-    NSString *_url;
+@implementation ImageLoadApi{
+    NSString* _url;
 }
 
 -(id)initWithUrl:(NSString *)url{
@@ -25,16 +25,18 @@
     ASIHTTPRequest *req=[[ASIHTTPRequest alloc]initWithURL:[NSURL URLWithString:_url]];
     return req;
 }
+
 -(id<XHFResponseParser>)getResponseParser{
-    return [[SimpleParser alloc]init];
+    return [[ImageLoadParser alloc]init];
 }
 
 @end
 
+@implementation ImageLoadParser
 
-@implementation SimpleParser
-
--(id)parse:(ASIHTTPRequest *)request error:(NSError *__autoreleasing *)error{
-    return request.responseString;
+-(id)parse:(ASIHTTPRequest *)request error:(NSError **)error{
+    UIImage *image=[[UIImage alloc]initWithData:request.responseData];
+    return image;
 }
+
 @end
