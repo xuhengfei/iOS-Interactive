@@ -102,17 +102,22 @@
     }
     for(id<XHFExecutorPlugin> plugin in _plugins){
         if([plugin respondsToSelector:@selector(postProcess:context:api:)]){
-            id r=[plugin postProcess:req context:context api:api];
-            if(r!=nil){
-                return r;
-            }
+            result=[plugin postProcess:req context:context api:api];
             if(context.needReplay){
                 return nil;
             }
+            if(result!=nil){
+                break;
+            }
+            
         }
     }
     if(result==nil){
         result= [[api getResponseParser]parse:req error:error];
+    }
+    if([result isKindOfClass:[NSError class]]){
+        *error=result;
+        result=nil;
     }
     return result;
 }
