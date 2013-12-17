@@ -116,7 +116,9 @@
         result= [[api getResponseParser]parse:req error:error];
     }
     if([result isKindOfClass:[NSError class]]){
-        *error=result;
+        if(error!=nil){
+            *error=result;
+        }
         result=nil;
     }
     return result;
