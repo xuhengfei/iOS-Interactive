@@ -38,20 +38,40 @@
     UIScrollView *scroll=[[UIScrollView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:scroll];
     
+    UIButton *button=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame=CGRectMake(10, 50, 300, 30);
+    [button setTitle:@"异步加载百度网页" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(asyncLoad) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button];
+    
+    UIButton *btn2=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn2.frame=CGRectMake(10, 100, 300, 30);
+    [btn2 setTitle:@"同步加载百度网页" forState:UIControlStateNormal];
+    [btn2 addTarget:self action:@selector(syncLoad) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:btn2];
+    
+//    ASIHTTPRequest *req=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://www.taobao.com"]];
+//    [req startSynchronous];
+//    NSLog(@"%@",req.responseString);
+}
+
+-(void)syncLoad{
+    SimpleApi *api=[[SimpleApi alloc]initWithUrl:@"http://www.baidu.com"];
+    NSError *error=nil;
+    NSString *result=[[[XHFSimpleExecutor alloc]init]execute:api error:&error];
+    if(error==nil){
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网页内容" message:result delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
+    }
+}
+-(void)asyncLoad{
     SimpleApi *api=[[SimpleApi alloc]initWithUrl:@"http://www.baidu.com"];
     [[[XHFSimpleExecutor alloc]init]execute:api completeOnMainThread:^(NSString* result, NSError *error) {
-        UILabel *label=[[UILabel alloc]init];
-        label.text=result;
-        NSLog(@"%@",result);
-        label.numberOfLines=0;
-        CGSize size=[label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(320, 100000)];
-        label.frame=CGRectMake(0, 0, size.width, size.height);
-        [scroll addSubview:label];
-        scroll.contentSize=size;
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网页内容" message:result delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
     }];
-    ASIHTTPRequest *req=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://www.taobao.com"]];
-    [req startSynchronous];
-    NSLog(@"%@",req.responseString);
 }
 
 - (void)didReceiveMemoryWarning
