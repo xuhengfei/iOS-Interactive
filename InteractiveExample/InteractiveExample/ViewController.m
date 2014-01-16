@@ -16,6 +16,7 @@
 #import "SimpleApi.h"
 #import "ImagePoolViewController.h"
 #import "ASIHTTPRequest.h"
+#import "SharedExecutor.h"
 
 @interface ViewController ()
 
@@ -60,7 +61,7 @@
 -(void)syncLoad{
     SimpleApi *api=[[SimpleApi alloc]initWithUrl:@"http://www.baidu.com"];
     NSError *error=nil;
-    NSString *result=[[[XHFSimpleExecutor alloc]init]execute:api error:&error];
+    NSString *result=[[SharedExecutor shared]execute:api error:&error];
     if(error==nil){
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网页内容" message:result delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
         [alert show];
@@ -68,7 +69,7 @@
 }
 -(void)asyncLoad{
     SimpleApi *api=[[SimpleApi alloc]initWithUrl:@"http://www.baidu.com"];
-    [[[XHFSimpleExecutor alloc]init]execute:api completeOnMainThread:^(NSString* result, NSError *error) {
+    [[SharedExecutor shared]execute:api completeOnMainThread:^(NSString* result, NSError *error) {
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"网页内容" message:result delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
         [alert show];
     }];

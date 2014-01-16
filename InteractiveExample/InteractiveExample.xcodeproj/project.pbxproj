@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2846DA1887955B00E21FC9 /* SharedExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2846D91887955B00E21FC9 /* SharedExecutor.m */; };
+		3E2846E01887963800E21FC9 /* LoginPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2846DF1887963800E21FC9 /* LoginPlugin.m */; };
 		E803EF3017AA449500F51ACB /* XHFExecutorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2717AA449500F51ACB /* XHFExecutorContext.m */; };
 		E803EF3117AA449500F51ACB /* XHFJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2B17AA449500F51ACB /* XHFJsonParser.m */; };
 		E803EF3217AA449500F51ACB /* XHFSimpleExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E803EF2D17AA449500F51ACB /* XHFSimpleExecutor.m */; };
@@ -57,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E2846D81887955B00E21FC9 /* SharedExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedExecutor.h; path = "InteractiveExample/超实用参考示例/SharedExecutor.h"; sourceTree = "<group>"; };
+		3E2846D91887955B00E21FC9 /* SharedExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedExecutor.m; path = "InteractiveExample/超实用参考示例/SharedExecutor.m"; sourceTree = "<group>"; };
+		3E2846DE1887963800E21FC9 /* LoginPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPlugin.h; path = "InteractiveExample/超实用参考示例/LoginPlugin.h"; sourceTree = "<group>"; };
+		3E2846DF1887963800E21FC9 /* LoginPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPlugin.m; path = "InteractiveExample/超实用参考示例/LoginPlugin.m"; sourceTree = "<group>"; };
 		E803EF2417AA449400F51ACB /* XHFApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFApi.h; sourceTree = "<group>"; };
 		E803EF2517AA449500F51ACB /* XHFExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFExecutor.h; sourceTree = "<group>"; };
 		E803EF2617AA449500F51ACB /* XHFExecutorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFExecutorContext.h; sourceTree = "<group>"; };
@@ -172,6 +178,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E2846D7188794E800E21FC9 /* 超实用参考示例 */ = {
+			isa = PBXGroup;
+			children = (
+				3E2846D81887955B00E21FC9 /* SharedExecutor.h */,
+				3E2846D91887955B00E21FC9 /* SharedExecutor.m */,
+				3E2846DE1887963800E21FC9 /* LoginPlugin.h */,
+				3E2846DF1887963800E21FC9 /* LoginPlugin.m */,
+			);
+			name = "超实用参考示例";
+			sourceTree = "<group>";
+		};
 		E803EF3417AA44D100F51ACB /* APIS */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +225,7 @@
 		E859F9FA176AAB0D005CB80B = {
 			isa = PBXGroup;
 			children = (
+				3E2846D7188794E800E21FC9 /* 超实用参考示例 */,
 				E803EF4217AD246A00F51ACB /* Cache */,
 				E859FA29176AAB41005CB80B /* Interactive */,
 				E859FA0C176AAB0D005CB80B /* InteractiveExample */,
@@ -456,6 +474,7 @@
 				E859FA8C176AAB54005CB80B /* ASICloudFilesObject.m in Sources */,
 				E859FA8D176AAB54005CB80B /* ASICloudFilesObjectRequest.m in Sources */,
 				E859FA8E176AAB54005CB80B /* ASICloudFilesRequest.m in Sources */,
+				3E2846E01887963800E21FC9 /* LoginPlugin.m in Sources */,
 				E859FA8F176AAB54005CB80B /* ASIS3Bucket.m in Sources */,
 				E859FA90176AAB54005CB80B /* ASIS3BucketObject.m in Sources */,
 				E859FA91176AAB54005CB80B /* ASIS3BucketRequest.m in Sources */,
@@ -463,6 +482,7 @@
 				E859FA93176AAB54005CB80B /* ASIS3Request.m in Sources */,
 				E859FA94176AAB54005CB80B /* ASIS3ServiceRequest.m in Sources */,
 				E859FAB6176AAFBE005CB80B /* Reachability.m in Sources */,
+				3E2846DA1887955B00E21FC9 /* SharedExecutor.m in Sources */,
 				E803EF3017AA449500F51ACB /* XHFExecutorContext.m in Sources */,
 				E803EF3117AA449500F51ACB /* XHFJsonParser.m in Sources */,
 				E803EF3217AA449500F51ACB /* XHFSimpleExecutor.m in Sources */,
